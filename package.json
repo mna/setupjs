@@ -6,7 +6,8 @@
   "dependencies": {
     "babel-polyfill": "^6.9.0",
     "deku": "^2.0.0-rc16",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",

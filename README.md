@@ -39,10 +39,22 @@ For vim, install `eslint` and `flow-bin` globally and activate as checkers in sy
 
 In addition to the development dependencies, this setup installs the following (personal preferences):
 
-* `redux`
-* `deku`
+* `redux` (bundled separately from the app's code)
+* `redux-thunk` (bundled with `redux`)
+* `deku` (bundled separately from the app's code)
+* `bulma` (CSS framework)
+* `font-awesome`
 
-Those two libraries are also generated as separate bundles by browserify.
+## File Sizes
+
+The client-downloaded file sizes are as follows for the production build (minified) and served gzipped:
+
+* CSS (bulma): 13.1KB
+* babel-polyfill: 34.4KB
+* redux (+redux-thunk): 3.0KB
+* deku: 6.3KB
+
+For a total (excluding app's code, style and html) of 56.8KB.
 
 ## License
 
