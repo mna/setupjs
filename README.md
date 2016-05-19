@@ -12,6 +12,7 @@ Run `npm install` in the root directory to install all dependencies. This setup 
 * Separate javascript bundles for "major" dependencies (e.g. `babel-polyfill` is in a separate file from the app's code)
 * Source maps generated for development build
 * Tests via `mocha`
+* Cache-busting for production builds via hashes of content in the filenames
 
 ## Directory Layout
 
