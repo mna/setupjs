@@ -12,7 +12,8 @@ Run `npm install` in the root directory to install all dependencies. This setup 
 * Separate javascript bundles for "major" dependencies (e.g. `babel-polyfill` is in a separate file from the app's code)
 * Source maps generated for development build
 * Tests via `mocha`
-* Cache-busting for production builds via hashes of content in the filenames
+* Automatic cache-busting for production build via hashes of content in the filenames
+* Pre-commit hook that checks linting and type-checking errors
 
 ## Directory Layout
 
@@ -29,6 +30,8 @@ Run `npm install` in the root directory to install all dependencies. This setup 
 - `/scripts` : the bash scripts used for the various `npm run-script` commands
 - `/misc` : miscellaneous helper files
 - `/test` : test files
+- `/interfaces` : flow third-party type definitions
+- `/decls` : flow type declarations common to the whole project
 
 See the `package.json` file for the various `run-script` commands. Most interesting are probably `npm run build` (set `NODE_ENV=production` for minified builds), `npm run watch` and `npm run test`.
 
