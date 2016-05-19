@@ -1,8 +1,8 @@
 /* @flow */
 
 import 'babel-polyfill'
-import thunk from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 
 export function doIt(x: number, y: number): number {
     console.log(`hey, ${x}`)
