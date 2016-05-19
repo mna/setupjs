@@ -1,0 +1,13 @@
+#!/bin/sh
+set -euo pipefail
+
+echo ">>> eslint"
+npm run --silent lint
+echo "<<< eslint"
+echo
+
+echo ">>> type check"
+npm run --silent check
+echo "<<< type check"
+echo
+

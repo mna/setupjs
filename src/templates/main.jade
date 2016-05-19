@@ -1,0 +1,21 @@
+extends ./layouts/layout.jade
+
+block append head
+    if process.env.NODE_ENV == "production"
+        link(rel="stylesheet", href="/css/build.min.css")
+    else
+        link(rel="stylesheet", href="/css/build.css")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+
+block body
+    if process.env.NODE_ENV == "production"
+        script(src="/js/babel_polyfill.min.js")
+        script(src="/js/redux.min.js")
+        script(src="/js/deku.min.js")
+        script(src="/js/build.min.js")
+    else
+        script(src="/js/babel_polyfill.js")
+        script(src="/js/redux.js")
+        script(src="/js/deku.js")
+        script(src="/js/build.js")
+

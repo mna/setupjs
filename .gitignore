@@ -1,0 +1,9 @@
+# direnv configuration
+.envrc
+
+# installed modules
+node_modules/
+
+# generated output
+build/
+

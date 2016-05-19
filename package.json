@@ -1,0 +1,40 @@
+{
+  "name": "testjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-polyfill": "^6.9.0",
+    "deku": "^2.0.0-rc16",
+    "redux": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "bulma": "0.0.26",
+    "eslint": "^2.10.2",
+    "eslint-plugin-flowtype": "^2.2.7",
+    "flow-bin": "^0.25.0",
+    "jade": "^1.11.0",
+    "local-web-server": "^1.2.4",
+    "node-sass": "^3.7.0",
+    "nodemon": "^1.9.2",
+    "uglifyjs": "^2.4.10"
+  },
+  "scripts": {
+    "prebuild": "npm run mkdir",
+    "build": "scripts/build.sh",
+    "watch": "scripts/watch.sh",
+    "serve": "scripts/serve.sh",
+    "check": "scripts/check.sh",
+    "lint": "scripts/lint.sh",
+    "mkdir": "scripts/mkdir.sh",
+    "clean": "scripts/clean.sh"
+  },
+  "author": "",
+  "license": "ISC"
+}
