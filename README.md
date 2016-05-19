@@ -1,16 +1,17 @@
 # Example Setup For Javascript Development
 
-Run `npm install` in the root directory to install all dependencies. This setup is highly opinionated and personal, YMMV. Hopefully it will be relevant for a couple weeks. It provides the following:
+Run `npm install` in the root directory to install all dependencies. This setup is highly opinionated and personal, YMMV. Hopefully it will stay relevant for a couple weeks. It provides the following:
 
 * ES2015 support via `babel` (including polyfill)
 * Type-checking via `flow`
 * Linting via `eslint`
-* Browserify-based build system
+* npm- and browserify-based build system (i.e. no gulp/grunt/etc.)
 * Templating via `jade`
 * CSS preprocessor via `sass`
 * Minified production builds for HTML, CSS and JS (via `uglifyjs`)
 * Separate javascript bundles for "major" dependencies (e.g. `babel-polyfill` is in a separate file from the app's code)
 * Source maps generated for development build
+* Tests via `mocha`
 
 ## Directory Layout
 
@@ -25,8 +26,10 @@ Run `npm install` in the root directory to install all dependencies. This setup 
 - `/build/js` : the generated (ES5, stripped of type annotations) javascript files
 - `/build/css` : the generated CSS files
 - `/scripts` : the bash scripts used for the various `npm run-script` commands
+- `/misc` : miscellaneous helper files
+- `/test` : test files
 
-See the `package.json` file for the various `run-script` commands. Most interesting are probably `npm run build` (set `NODE_ENV=production` for minified builds), and `npm run watch`.
+See the `package.json` file for the various `run-script` commands. Most interesting are probably `npm run build` (set `NODE_ENV=production` for minified builds), `npm run watch` and `npm run test`.
 
 ## Editor Support
 
@@ -40,4 +43,8 @@ In addition to the development dependencies, this setup installs the following (
 * `deku`
 
 Those two libraries are also generated as separate bundles by browserify.
+
+## License
+
+The BSD 3-clause license.
 
