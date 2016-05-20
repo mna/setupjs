@@ -8,13 +8,17 @@ import thunk from 'redux-thunk'
 import reducers from './reducers'
 import Counter from './counter'
 
-const store = createStore(reducers, compose(
-    applyMiddleware(thunk),
-    window.devToolsExtension ? window.devToolsExtension() : (f: any): any => f
-))
+// add the thunk middleware, and the DevTools Chrome extension in dev
+// (and if the extension is available)
+let enhancers = applyMiddleware(thunk)
+if (process.env.NODE_ENV === 'development') {
+    if (window.devToolsExtension) {
+        enhancers = compose(enhancers, window.devToolsExtension())
+    }
+}
 
+const store = createStore(reducers, enhancers)
 const rootEl = document.getElementById('root')
-
 const render = createApp(rootEl, store.dispatch)
 
 render(element(Counter))

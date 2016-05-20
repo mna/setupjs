@@ -19,6 +19,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "bulma": "0.0.26",
+    "envify": "^3.4.0",
     "eslint": "^2.10.2",
     "eslint-plugin-flow-vars": "^0.4.0",
     "eslint-plugin-flowtype": "^2.2.7",
