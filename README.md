@@ -28,7 +28,7 @@ Run `npm install` in the root directory to install all dependencies. This setup 
 - `/build/js` : the generated (ES5, stripped of type annotations) javascript files
 - `/build/css` : the generated CSS files
 - `/scripts` : the bash scripts used for the various `npm run-script` commands
-- `/misc` : miscellaneous helper files
+- `/misc` : miscellaneous helper files (e.g. git hook)
 - `/test` : test files
 - `/interfaces` : flow third-party type definitions
 - `/decls` : flow type declarations common to the whole project
@@ -48,7 +48,7 @@ In addition to the development dependencies, this setup installs the following (
 * `deku` (bundled separately from the app's code)
 * `dscript` (generic hyperscript, bundled with `deku`)
 * `bulma` (CSS framework)
-* `font-awesome`
+* `font-awesome` (linked from CDN in jade template)
 
 ## File Sizes
 
