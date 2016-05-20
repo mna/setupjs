@@ -24,7 +24,7 @@ function incrAsyncClick(dispatch: Dispatch): Function {
     }
 }
 
-function render(obj: Object): VirtualElement {
+export default function render(obj: Object): VirtualElement {
     const dispatch = obj.dispatch
     return (
         div([
@@ -34,8 +34,4 @@ function render(obj: Object): VirtualElement {
             button({onClick: incrAsyncClick(dispatch)}, ['IncAsync']),
         ])
     )
-}
-
-export default {
-    render,
 }
