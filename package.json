@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-polyfill": "^6.9.0",
     "deku": "^2.0.0-rc16",
+    "dscript": "^1.1.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0"
   },

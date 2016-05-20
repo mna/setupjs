@@ -23,9 +23,9 @@ node-sass src/styles/main.sass build/css/build.css
 # generate js bundle for babel-polyfill, redux and deku
 browserify -r babel-polyfill > build/js/babel_polyfill.js
 browserify -r redux -r redux-thunk > build/js/redux.js
-browserify -r deku > build/js/deku.js
+browserify -r deku -r dscript > build/js/deku.js
 # generate js bundle for app code
-browserify -x babel-polyfill -x redux -x redux-thunk -x deku -d -t babelify src/js/main.js > build/js/build.js
+browserify -x babel-polyfill -x redux -x redux-thunk -x deku -x dscript -d -t babelify src/js/main.js > build/js/build.js
 
 # set the default filenames for the pages to link to
 export BUILD_CSS_FILENAME=build.css

@@ -46,6 +46,7 @@ In addition to the development dependencies, this setup installs the following (
 * `redux` (bundled separately from the app's code)
 * `redux-thunk` (bundled with `redux`)
 * `deku` (bundled separately from the app's code)
+* `dscript` (generic hyperscript, bundled with `deku`)
 * `bulma` (CSS framework)
 * `font-awesome`
 
@@ -56,9 +57,9 @@ The client-downloaded file sizes are as follows for the production build (minifi
 * CSS (bulma): 13.1KB
 * babel-polyfill: 34.4KB
 * redux (+redux-thunk): 3.0KB
-* deku: 6.3KB
+* deku: 7.6KB
 
-For a total (excluding app's code, style and html) of 56.8KB.
+For a total (excluding app's code, style and html) of 58.1KB.
 
 ## License
 
