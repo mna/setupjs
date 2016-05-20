@@ -7,6 +7,7 @@ import { createApp, element } from 'deku'
 import thunk from 'redux-thunk'
 import reducers from './reducers'
 import Counter from './counter'
+import { run } from './actions'
 
 // add the thunk middleware, and the DevTools Chrome extension in dev
 // (and if the extension is available)
@@ -21,5 +22,8 @@ const store = createStore(reducers, enhancers)
 const rootEl = document.getElementById('root')
 const render = createApp(rootEl, store.dispatch)
 
-render(element(Counter))
+store.subscribe(function() {
+    render(element(Counter), store.getState())
+})
+store.dispatch(run())
 

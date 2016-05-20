@@ -1,20 +1,17 @@
 /* @flow */
 
 export const actions = {
+    RUN: 'RUN',
     INCREMENT: 'INCREMENT',
     DECREMENT: 'DECREMENT',
 }
 
 export function increment(): Action {
-    return {
-        type: actions.INCREMENT,
-    }
+    return {type: actions.INCREMENT}
 }
 
 export function decrement(): Action {
-    return {
-        type: actions.DECREMENT,
-    }
+    return {type: actions.DECREMENT}
 }
 
 export function incrementAsync(): Thunk {
@@ -27,3 +24,6 @@ export function incrementAsync(): Thunk {
     }
 }
 
+export function run(): Action {
+    return {type: actions.RUN}
+}

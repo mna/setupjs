@@ -26,9 +26,11 @@ function incrAsyncClick(dispatch: Dispatch): Function {
 
 export default function render(obj: Object): VirtualElement {
     const dispatch = obj.dispatch
+    const state = obj.context
+    console.log(state)
     return (
         div([
-            'Hello!',
+            `Hello! ${state.value}`,
             button({onClick: incrClick(dispatch)}, ['Increment']),
             button({onClick: decrClick(dispatch)}, ['Decrement']),
             button({onClick: incrAsyncClick(dispatch)}, ['IncAsync']),
