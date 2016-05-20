@@ -1,18 +1,21 @@
 /* @flow */
 
-import 'babel-polyfill'
-import { createStore, applyMiddleware } from 'redux'
+import 'babel-polyfill' // must be first import
+
+import { createStore, applyMiddleware, compose } from 'redux'
+import { createApp, element } from 'deku'
 import thunk from 'redux-thunk'
+import reducers from './reducers'
+import Counter from './counter'
 
-export function doIt(x: number, y: number): number {
-    console.log(`hey, ${x}`)
-    return x + y
-}
+const store = createStore(reducers, compose(
+    applyMiddleware(thunk),
+    window.devToolsExtension ? window.devToolsExtension() : (f: any): any => f
+))
 
-const store = createStore((state: Object, action: Object): Object => {
-    console.log('I reduce stuff')
-    return state
-}, applyMiddleware(thunk))
+const rootEl = document.getElementById('root')
 
-store.dispatch({type: 'SOMETHING_HAPPENED'})
+const render = createApp(rootEl, store.dispatch)
+
+render(element(Counter))
 

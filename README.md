@@ -29,11 +29,11 @@ Run `npm install` in the root directory to install all dependencies. This setup 
 - `/build/css` : the generated CSS files
 - `/scripts` : the bash scripts used for the various `npm run-script` commands
 - `/misc` : miscellaneous helper files (e.g. git hook)
-- `/test` : test files
+- `/test` : test files, run with `npm test`
 - `/interfaces` : flow third-party type definitions
 - `/decls` : flow type declarations common to the whole project
 
-See the `package.json` file for the various `run-script` commands. Most interesting are probably `npm run build` (set `NODE_ENV=production` for minified builds), `npm run watch` and `npm run test`.
+See the `package.json` file for the various `run-script` commands. Most interesting are probably `npm run build` (set `NODE_ENV=production` for minified builds), `npm run watch` and `npm run test` (or simply `npm test`).
 
 ## Editor Support
 

@@ -20,6 +20,7 @@
     "browserify": "^13.0.1",
     "bulma": "0.0.26",
     "eslint": "^2.10.2",
+    "eslint-plugin-flow-vars": "^0.4.0",
     "eslint-plugin-flowtype": "^2.2.7",
     "flow-bin": "^0.25.0",
     "jade": "^1.11.0",

@@ -5,6 +5,8 @@ block append head
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
 
 block body
+    #root
+
     script(src="/js/" + process.env.BUILD_POLYFILL_FILENAME)
     script(src="/js/" + process.env.BUILD_REDUX_FILENAME)
     script(src="/js/" + process.env.BUILD_DEKU_FILENAME)

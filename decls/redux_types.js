@@ -30,7 +30,7 @@ declare type State = Object
 declare type Reducer = (state: State, action: Action) => State
 
 // Thunk is an async action as supported by redux-thunk.
-declare type Thunk = (args: any) => Promise
+declare type Thunk = (dispatch: Dispatch, getState: () => State) => Promise
 
 // Dispatch is the type of the dispatch function that takes an action or
 // a thunk and sends it to the store (directly or asynchronously).
