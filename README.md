@@ -9,8 +9,8 @@ Run `npm install` in the root directory to install all dependencies. This setup 
 * Templating via `jade`
 * CSS preprocessor via `sass`
 * Minified production builds for HTML, CSS and JS (via `uglifyjs`)
-* Separate javascript bundles for "major" dependencies (e.g. `babel-polyfill` is in a separate file from the app's code)
-* Source maps generated for development build
+* Separate javascript bundles for dependencies (e.g. `babel-polyfill` is in a separate file from the app's code)
+* Source maps generated for development build (CSS and JS)
 * Tests via `mocha`
 * Automatic cache-busting for production build via hashes of content in the filenames
 * Pre-commit hook that checks linting and type-checking errors
