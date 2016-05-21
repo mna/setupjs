@@ -14,8 +14,8 @@ function dispatchEvent(dispatch: Dispatch, action: Action | Thunk): (ev: Event) 
 
 // see https://github.com/facebook/flow/issues/307
 // can't type-annotate directly when destructuring args.
-type renderArgs = {dispatch: Dispatch, context: State}
-export default function render({dispatch, context}: renderArgs): VirtualElement {
+type RenderArgs = {dispatch: Dispatch, context: State}
+export default function render({dispatch, context}: RenderArgs): VirtualElement {
     return (
         div([
             `Hello! ${context.value}`,
