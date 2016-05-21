@@ -28,7 +28,7 @@
         "constructor-super": 2,
         "curly": [2, "multi-line"],
         "default-case": 0,
-        "dot-location": [2, "property"],
+        "dot-location": [2, "object"],
         "dot-notation": 0,
         "eol-last": 2,
         "eqeqeq": [2, "allow-null"],

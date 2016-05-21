@@ -3,8 +3,8 @@
 import 'babel-polyfill' // must be first import
 
 import { createStore, applyMiddleware, compose } from 'redux'
-import { createApp, element } from 'deku'
 import thunk from 'redux-thunk'
+import { createApp, element } from 'deku'
 import reducers from './reducers'
 import Counter from './counter'
 import { run } from './actions'

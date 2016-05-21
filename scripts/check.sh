@@ -2,4 +2,5 @@
 set -euo pipefail
 
 flow src/js
+flow test
 

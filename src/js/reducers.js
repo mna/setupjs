@@ -11,11 +11,9 @@ export default function counter(state: State = initialState, action: Action): St
     switch (action.type) {
         case actions.INCREMENT:
             value = state.value + 1
-            console.log(value)
             return Object.assign({}, state, {value})
         case actions.DECREMENT:
             value = state.value - 1
-            console.log(value)
             return Object.assign({}, state, {value})
         default:
             return state

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-eslint src/js
+eslint src/js test/
 

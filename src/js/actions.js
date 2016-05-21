@@ -17,9 +17,7 @@ export function decrement(): Action {
 export function incrementAsync(): Thunk {
     return (dispatch: Dispatch): Promise => {
         return new Promise((resolve: Function) => {
-            setTimeout(() => {
-                resolve(dispatch(increment()))
-            }, 1000)
+            setTimeout(() => {resolve(dispatch(increment()))}, 1000)
         })
     }
 }
