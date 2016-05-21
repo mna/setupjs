@@ -165,8 +165,8 @@
         "wrap-regex": 0,
         "yoda": [2, "never"],
 
-        "flowtype/require-parameter-type": 1,
-        "flowtype/require-return-type": [1, "always", {"annotateUndefined": "never"}],
+        "flowtype/require-parameter-type": 0,
+        "flowtype/require-return-type": [0, "always", {"annotateUndefined": "never"}],
         "flowtype/space-after-type-colon": [1, "always"],
         "flowtype/space-before-type-colon": [1, "never"],
         "flowtype/type-id-match": [1, "^([A-Z][a-z0-9]+)+Type$"],
@@ -177,7 +177,7 @@
 
     "settings": {
         "flowtype": {
-            "onlyFilesWithFlowAnnotation": false
+            "onlyFilesWithFlowAnnotation": true
         }
     }
 }

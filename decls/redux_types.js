@@ -23,7 +23,7 @@ declare type Action = {
 
 // TODO : The State declaration should be replaced with the actual state type
 // used for the project.
-declare type State = Object
+declare type State = {value: number}
 
 // Reducer is a pure function that takes an initial state and action, and
 // returns the new state.

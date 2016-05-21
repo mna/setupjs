@@ -1,5 +1,7 @@
 declare module 'redux' {
-    declare function createStore(reducer: Reducer, initialState: ?State, enhancer: ?StoreEnhancer): Store
+    // actual declaration of createStore is (Reducer, ?(State|StoreEnhancer), ?StoreEnhancer),
+    // but for my use, it's always (Reducer, StoreEnhancer).
+    declare function createStore(reducer: Reducer, enhancer: StoreEnhancer): Store
     declare function combineReducers(reducers: Object): Reducer
     declare function applyMiddleware(...middlewares: Middleware[]): StoreEnhancer
     declare function compose(...funcs: StoreEnhancer[]): StoreEnhancer

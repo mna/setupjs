@@ -6,34 +6,22 @@ import {increment, decrement, incrementAsync} from './actions'
 
 const {div, button} = dscript(element)
 
-function incrClick(dispatch: Dispatch): Function {
-    return function() {
-        dispatch(increment())
+function dispatchEvent(dispatch: Dispatch, action: Action | Thunk): (ev: Event) => void {
+    return function(ev: Event) {
+        dispatch(action)
     }
 }
 
-function decrClick(dispatch: Dispatch): Function {
-    return function() {
-        dispatch(decrement())
-    }
-}
-
-function incrAsyncClick(dispatch: Dispatch): Function {
-    return function() {
-        dispatch(incrementAsync())
-    }
-}
-
-export default function render(obj: Object): VirtualElement {
-    const dispatch = obj.dispatch
-    const state = obj.context
-    console.log(state)
+// see https://github.com/facebook/flow/issues/307
+// can't type-annotate directly when destructuring args.
+type renderArgs = {dispatch: Dispatch, context: State}
+export default function render({dispatch, context}: renderArgs): VirtualElement {
     return (
         div([
-            `Hello! ${state.value}`,
-            button({class: 'button', onClick: incrClick(dispatch)}, ['Increment']),
-            button({class: 'button', onClick: decrClick(dispatch)}, ['Decrement']),
-            button({class: 'button', onClick: incrAsyncClick(dispatch)}, ['IncAsync']),
+            `Hello! ${context.value}`,
+            button({class: 'button', onClick: dispatchEvent(dispatch, increment())}, ['Increment']),
+            button({class: 'button', onClick: dispatchEvent(dispatch, decrement())}, ['Decrement']),
+            button({class: 'button', onClick: dispatchEvent(dispatch, incrementAsync())}, ['IncAsync']),
         ])
     )
 }
