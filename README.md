@@ -57,7 +57,7 @@ The client-downloaded file sizes are as follows for the production build (minifi
 * CSS (bulma): 13.1KB
 * babel-polyfill: 34.4KB
 * redux (+redux-thunk): 3.0KB
-* deku: 7.6KB
+* deku (+dscript): 7.6KB
 
 For a total (excluding app's code, style and html) of 58.1KB.
 

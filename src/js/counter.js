@@ -31,9 +31,9 @@ export default function render(obj: Object): VirtualElement {
     return (
         div([
             `Hello! ${state.value}`,
-            button({onClick: incrClick(dispatch)}, ['Increment']),
-            button({onClick: decrClick(dispatch)}, ['Decrement']),
-            button({onClick: incrAsyncClick(dispatch)}, ['IncAsync']),
+            button({class: 'button', onClick: incrClick(dispatch)}, ['Increment']),
+            button({class: 'button', onClick: decrClick(dispatch)}, ['Decrement']),
+            button({class: 'button', onClick: incrAsyncClick(dispatch)}, ['IncAsync']),
         ])
     )
 }

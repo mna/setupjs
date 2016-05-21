@@ -18,7 +18,7 @@ if [[ -z ${NODE_ENV-} ]]; then
 fi
 
 # generate development build of CSS
-node-sass src/styles/main.sass build/css/build.css
+node-sass --source-map true --source-map-contents src/styles/main.sass build/css/build.css
 
 # generate js bundle for babel-polyfill, redux and deku
 browserify -r babel-polyfill > build/js/babel_polyfill.js
